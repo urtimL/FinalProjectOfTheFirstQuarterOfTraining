@@ -1,2 +1,21 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string GetString()
+{
+    Console.Write("Для создания массива введите строки через запятую: ");
+    string[] array = Console.ReadLine().Split(',');
+    string rez = "";
+
+    foreach (var item in array)
+    {
+        if (item.Length <= 3)
+        {
+            rez += item + ", ";
+        }
+    }
+
+    rez = rez.TrimEnd(' ');
+    rez = rez.TrimEnd(',');
+
+    return rez;
+}
+
+Console.WriteLine("[" + GetString() + "]");
