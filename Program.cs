@@ -18,4 +18,6 @@
     return rez;
 }
 
-Console.WriteLine("[" + GetString() + "]");
+string str = GetString();
+string[] finalArray = str.Split(',');
+Console.WriteLine("[" + str + "]");
